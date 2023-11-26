@@ -10,10 +10,10 @@ router.post('/createuser', async (req, res) => {
 
         // Create a new user document
         const newUser = new User({
-            name: 'prasad',
-            location: 'colombo',
-            email: 'prasad@gmail.com',
-            password: '123456@',
+            name: req.body.name,
+            location: req.body.location,
+            email: req.body.email,
+            password: req.body.password
         });
 
         // Save the new user document to the database
